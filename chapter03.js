@@ -37,4 +37,3 @@ function countChar(s, c) {
 function countBs(s) {
     return countChar(s, 'B');
 }
-
