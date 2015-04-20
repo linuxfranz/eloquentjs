@@ -5,7 +5,7 @@
 * Objekte werden mit {...} deklariert.
 * Objekte haben Properties
  * Zugriff auf Werte von Properties mit obj.property
- * alternativ mit obj['property']  (Array-Syntax)
+ * alternativ mit obj\['property'\]  (Array-Syntax)
 * Beinahe alle Werte in JS sind Objekte und haben Properties (Ausnahmen: null und undefined)
 * Arrays sind Objekte mit numerischen Properties
 * Arrays haben ein length Property
