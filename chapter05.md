@@ -23,5 +23,5 @@
 * `array.filter(function)` liefert ein neues Array mit allen Elementen, für die function `true` liefert
 * `array.map(function)` liefert ein neues Array, das e Elemente nach Anwendung von function auf die ursprünglichen enthält
 * `array.reduce(function(a,b), start)`: Reduziert die Werte eines Arrays durch wiederholte Anwendung von function mit jeweils einer Laufvariablen und einem Element von array als Parameter auf alle Elemente. start ist der Ausgangswert für die Laufvariable, falls nicht angegeben, wird das erste Element von array genommen
-* Hauptvorteil der Funtktionen höherer Ordnung ist die Möglichkeit sie zu kombinieren `reduce(map(filter()))` etc. was einfachen aussagekräftigen Code ermöglicht, aber u.U. auch ineffizient sein kann (Speicher für neue Arrays, Funktionsaufrufe in JS sind ineffizient verglichen mt einfachen Schleifen)
+* Hauptvorteil der Funtktionen höherer Ordnung ist die Möglichkeit sie zu kombinieren `reduce(map(filter()))` etc. was einfachen aussagekräftigen Code ermöglicht, aber u.U. auch ineffizient sein kann (Speicher für neue Arrays, Funktionsaufrufe in JS sind ineffizient verglichen mit einfachen Schleifen)
 * `function.bind(null, var,...)` liefert function mit einem Teil der Parameter vorbelegt (var...), sog. teilweise Anwendung einer Funktion (partial application)
