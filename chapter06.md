@@ -36,6 +36,12 @@ neue Objekt zugegriffen werden und z. B. Properties gesetzt werden.
 
 ## Überschreiben von Properties
 
-Wenn man bei einem Objekt ein Property setzt so überschreibt dessen Wert das gleichnamige
+* Wenn man bei einem Objekt ein Property setzt so überschreibt dessen Wert das gleichnamige
 Property in einem Prototype.  Auf diese Art und Weise können also auch Methoden
 überschrieben werden.  
+* Problem bei Iteration (`for (var property in obj) {...}`) über Properties eines Objekts:
+  Es werden auch alle Properties des Prototype durchlaufen. Will man das nicht
+   muss man es mit `obj.hasOwnProperty(property)` abfangen.
+* Iteriert wird über alle Properties, die das Property `enumerable=true` haben.
+ Man kann ein Property also auch "verstecken" mit
+ `Object.defineProperty(obj.prototype, 'hidden', {enumerable: false, value: 'foo'} )`
