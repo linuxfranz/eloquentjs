@@ -61,11 +61,12 @@ function StretchCell(inner, width, height) {
 }
 
 StretchCell.prototype.minWidth = function() {
-  var minWidth = this.inner.minWidth();
-  if (minWidth < this.width) {
-    minWidth = this.width;
-  }
-  return minWidth;
+    var minWidth = this.inner.minWidth();
+    // der Emacs möchte immer selbst indenten :-/
+    if (minWidth < this.width) {
+        minWidth = this.width;
+    }
+    return minWidth;
 }
 
 StretchCell.prototype.minHeight = function() {
