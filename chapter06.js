@@ -90,4 +90,62 @@ console.log(sc.draw(3, 2));
 // → ["abc", "   "]
 
 
-//
+// Sequence Interface
+
+// nextElement() -> returns the next element of the Sequence
+// hasMore() -> true if Sequence has more elements
+
+function logFive(seq) {
+  for (var i = 0; i < 5; i++) {
+    if (seq.hasMoreElements()) {
+      console.log(seq.nextElement());
+    } else {
+      break;
+    }
+  }
+}
+
+function ArraySeq(arr) {
+  this.arr = arr;
+  this.index = -1;
+}
+
+ArraySeq.prototype.nextElement = function() {
+  if (this.index < this.arr.length) {
+    this.index = this.index + 1;
+    return this.arr[this.index];
+  } else {
+    return nil;
+  }
+}
+
+ArraySeq.prototype.hasMoreElements = function() {
+  return this.index < this.arr.length - 1;
+}
+
+function RangeSeq(from, to) {
+  this.from = from;
+  this.to = to;
+  this.current = from - 1;
+}
+
+RangeSeq.prototype.nextElement = function() {
+  if (this.current < this.to) {
+    this.current = this.current + 1;
+    return this.current;
+  }
+}
+
+RangeSeq.prototype.hasMoreElements = function() {
+  return this.current < this.to;
+}
+
+logFive(new ArraySeq([1, 2]));
+// → 1
+// → 2
+logFive(new RangeSeq(100, 1000));
+// → 100
+// → 101
+// → 102
+// → 103
+// → 104
