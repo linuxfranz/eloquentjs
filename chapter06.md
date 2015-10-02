@@ -69,3 +69,5 @@ Property in einem Prototype.  Auf diese Art und Weise können also auch Methoden
   muss mit `Erbe.prototype = Object.create(Vererber.prototype)` noch der Prototyp
   des anderen Objekts übernommen werden. Danach können Properties des
   Eltern-Objekts überschrieben werden.
+* Mit dem Operator `A instanceof B` kann man feststellen, ob Objekt A von Objekt
+  B geerbt hat (liefert in diesem Fall true).
