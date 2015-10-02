@@ -45,3 +45,15 @@ Property in einem Prototype.  Auf diese Art und Weise können also auch Methoden
 * Iteriert wird über alle Properties, die das Property `enumerable=true` haben.
  Man kann ein Property also auch "verstecken" mit
  `Object.defineProperty(obj.prototype, 'hidden', {enumerable: false, value: 'foo'} )`
+
+## Objects ohne prototpye
+
+* Will man ein Object ohne prototpye erzeugen (z.B. als einfach Map über deren
+  keys man mit for..in iterieren kann), so geht dies mit `var map = Object.create(null)`.
+
+## Getter und Setter
+
+* Mit `get property()` und `set property(new_value)` können für ein Property
+ Funktionen definiert werden, die aufgerufen werden, wenn das Property gelesen
+ (obj.property) oder gesetzt (obj.property=some_value) wird. Mit
+ definieren, indem diese in einem Hash als letztes Argument übergeben werden.
