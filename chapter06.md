@@ -55,5 +55,17 @@ Property in einem Prototype.  Auf diese Art und Weise können also auch Methoden
 
 * Mit `get property()` und `set property(new_value)` können für ein Property
  Funktionen definiert werden, die aufgerufen werden, wenn das Property gelesen
- (obj.property) oder gesetzt (obj.property=some_value) wird. Mit
- definieren, indem diese in einem Hash als letztes Argument übergeben werden.
+ (obj.property) oder gesetzt (obj.property=some_value) wird.
+* Mit `Object.defineProperty()`
+  lassen sich Getter und Setter nachträglich definieren, indem diese in einem
+  Hash als letztes Argument übergeben werden.
+* Wenn nur ein Setter definiert ist, so werden Versuche, das Property zu ändern
+  einfach ignoriert.
+
+## Vererbung
+
+* Ein Objekt erbt von einem anderen, indem es in seiner Konstruktor-Funktion
+  den Konstruktor des anderen Objekts mit `Obj.call(this, ...)` aufruft. Ausserdem
+  muss mit `Erbe.prototype = Object.create(Vererber.prototype)` noch der Prototyp
+  des anderen Objekts übernommen werden. Danach können Properties des
+  Eltern-Objekts überschrieben werden.
