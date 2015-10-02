@@ -56,17 +56,17 @@ TextCell.prototype.draw = function(width, height) {
 
 function StretchCell(inner, width, height) {
   this.inner = inner;
-  this.with = width;
+  this.width = width;
   this.height = height;
 }
 
 StretchCell.prototype.minWidth = function() {
-    var minWidth = this.inner.minWidth();
-    // der Emacs möchte immer selbst indenten :-/
-    if (minWidth < this.width) {
-        minWidth = this.width;
-    }
-    return minWidth;
+  var minWidth = this.inner.minWidth();
+  // der Emacs möchte immer selbst indenten :-/
+  if (minWidth < this.width) {
+    minWidth = this.width;
+  }
+  return minWidth;
 }
 
 StretchCell.prototype.minHeight = function() {
