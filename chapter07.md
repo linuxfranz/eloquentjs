@@ -24,6 +24,8 @@ des aufrufenden Kontext übergeben werden kann, also etwa `arr.map(function(){},
 
 Will man z.B. ein foreach(function, args) schreiben, so kann man dies mit Hilfe von `function.call()` folgendermassen:
 
+```javascript
 foreach = function(f, context) {
   f.call(context, more, args);
 }
+```
