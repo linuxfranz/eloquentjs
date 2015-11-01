@@ -16,8 +16,7 @@ Man kann mit function() {}.bind(this); explizit das `this` des aufrufenden
   Objekts an die Funktion übergeben.
 
 ### Lösung 3:
-Viele Methoden höherer Ordnung auf Arrays (map, forEach...) haben einen
-neben der Funktion auch einen optionalen zweiten Parameter, über den das `this`
+Viele Methoden höherer Ordnung auf Arrays (map, forEach...) haben neben der Funktion auch einen optionalen zweiten Parameter, über den das `this`
 des aufrufenden Kontext übergeben werden kann, also etwa `arr.map(function(){}, this)`
 
 ## Wie schreibt man selbst Methoden höherer Ordnung?
