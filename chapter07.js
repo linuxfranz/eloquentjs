@@ -85,6 +85,9 @@ function randomElement(array) {
 
 var directionNames = "n ne e se s sw w nw".split(" ");
 
+/*
+  Simple gritter that moves in random direction
+*/
 
 function BouncingCritter() {
   this.direction = randomElement(directionNames);
